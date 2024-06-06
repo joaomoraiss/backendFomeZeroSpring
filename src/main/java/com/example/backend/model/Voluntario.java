@@ -25,7 +25,6 @@ public class Voluntario {
     }
 
     public void oferecerAjuda() {
-        // Implementação do método oferecerAjuda()
         if (this.disponibilidade) {
             System.out.println(nome + " está oferecendo ajuda!");
         } else {

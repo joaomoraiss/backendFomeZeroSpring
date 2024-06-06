@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class User {
+public class Register {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
@@ -23,7 +23,7 @@ public class User {
 
     @Getter
     @Column(nullable = false)
-    private String nickname;
+    private String username;
 
     @Getter
     @Column(nullable = false)

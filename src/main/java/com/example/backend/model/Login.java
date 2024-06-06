@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class User {
+public class Login {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -22,5 +22,5 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    
+
 }

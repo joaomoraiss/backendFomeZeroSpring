@@ -1,8 +1,8 @@
 package com.example.backend.repository;
 
-import com.example.backend.model.User;
+import com.example.backend.model.Login;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, UUID> {
-    User findByUsername(String username);
+public interface LoginRepository extends JpaRepository<Login, Long> {
+    Login findByUsername(String username);
 }

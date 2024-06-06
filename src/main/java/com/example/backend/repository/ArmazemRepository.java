@@ -7,4 +7,6 @@ import java.util.UUID;
 
 public interface ArmazemRepository extends JpaRepository<Armazem, Long> {
     boolean existsById(UUID id);
+
+    void deleteById(UUID id);
 }

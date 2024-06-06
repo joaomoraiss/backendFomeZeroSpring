@@ -1,7 +1,9 @@
 package com.example.backend.controller;
 
-import com.example.backend.model.User;
-import com.example.backend.repository.UserRepository;
+import com.example.backend.model.Login;
+
+import com.example.backend.repository.LoginRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,12 +13,12 @@ import org.springframework.web.bind.annotation.*;
 public class LoginController {
 
     @Autowired
-    private UserRepository userRepository;
+    private LoginRepository loginRepository;
 
     @PostMapping
-    public ResponseEntity<String> login(@RequestBody User user) {
-        User foundUser = userRepository.findByUsername(user.getUsername());
-        if (foundUser != null && foundUser.getPassword().equals(user.getPassword())) {
+    public ResponseEntity<String> login(@RequestBody Login login) {
+        Login foundUser = loginRepository.findByUsername(login.getUsername());
+        if (foundUser != null && foundUser.getPassword().equals(login.getPassword())) {
             
             return ResponseEntity.ok("Login successful!");
         }
