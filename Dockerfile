@@ -8,9 +8,6 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
-# Adicione uma etapa para imprimir o conteúdo de application.properties
-RUN cat src/main/resources/application.properties
-
 # Baixe as dependências e compile o aplicativo
 RUN mvn clean package -DskipTests
 
@@ -22,9 +19,6 @@ WORKDIR /app
 
 # Copie o JAR do estágio de construção
 COPY --from=build /app/target/*.jar app.jar
-
-# Copie o arquivo application.properties
-COPY src/main/resources/application.properties /app/application.properties
 
 # Defina a variável de ambiente PORT
 ENV PORT 8080
