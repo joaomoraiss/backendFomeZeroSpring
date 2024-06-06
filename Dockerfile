@@ -20,6 +20,9 @@ WORKDIR /app
 # Copie o JAR do estágio de construção
 COPY --from=build /app/target/*.jar app.jar
 
+# Copie o arquivo application.properties
+COPY src/main/resources/application.properties /app/application.properties
+
 # Defina a variável de ambiente PORT
 ENV PORT 8080
 
