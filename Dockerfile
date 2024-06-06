@@ -8,6 +8,9 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
+# Adicione uma etapa para imprimir o conteúdo de application.properties
+RUN cat src/main/resources/application.properties
+
 # Baixe as dependências e compile o aplicativo
 RUN mvn clean package -DskipTests
 
