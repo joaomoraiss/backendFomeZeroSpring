@@ -1,26 +1,32 @@
 package com.example.backend.model;
 
+import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.*;
+import java.util.UUID;
 
-@Entity
 @Data
+@Entity
 public class Register {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id;
 
+    @Getter @Setter
     @Column(nullable = false)
     private String email;
 
+    @Getter @Setter
     @Column(nullable = false)
     private String password;
 
+    @Getter @Setter
     @Column(nullable = false)
     private String nickname;
 
+    @Getter @Setter
     @Column(nullable = false)
     private String gender;
 
@@ -35,6 +41,4 @@ public class Register {
         this.nickname = nickname;
         this.gender = gender;
     }
-
-    // Getters e setters
 }

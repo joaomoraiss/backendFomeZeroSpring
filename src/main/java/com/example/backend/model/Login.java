@@ -1,29 +1,24 @@
 package com.example.backend.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.UUID;
+
+@Data
 @Entity
 public class Login {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+
+    @Getter @Setter
+    @Column(nullable = false, unique = true)
     private String username;
+
+    @Getter @Setter
+    @Column(nullable = false)
     private String password;
-
-    // Getters e setterss
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }

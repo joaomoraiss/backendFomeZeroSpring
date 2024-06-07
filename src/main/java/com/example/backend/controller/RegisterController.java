@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/register")
 public class RegisterController {
-    
 
     @Autowired
     private RegisterRepository registerRepository;
