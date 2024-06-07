@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/register")
@@ -26,7 +27,7 @@ public class RegisterController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Register> update(@PathVariable Long id, @RequestBody Register register) {
+    public ResponseEntity<Register> update(@PathVariable UUID id, @RequestBody Register register) {
         if (!registerRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
@@ -35,7 +36,7 @@ public class RegisterController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
+    public ResponseEntity<Void> delete(@PathVariable UUID id) {
         if (!registerRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
