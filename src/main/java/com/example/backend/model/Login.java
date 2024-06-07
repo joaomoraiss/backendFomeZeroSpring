@@ -9,7 +9,7 @@ public class Login {
     private String username;
     private String password;
 
-    // Getters e setters
+    // Getters e setterss
 
     public String getUsername() {
         return username;
