@@ -7,7 +7,7 @@ Post ->
     "nome": "ONG Exemplo",
     "localizacao": "Cidade Exemplo",
     "tipoDeOng": "Assistência Social"
-}
+}f
 
 
 Post /api/ongs/{id}/adicionar-necessidade ->
