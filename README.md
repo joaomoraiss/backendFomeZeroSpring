@@ -119,7 +119,7 @@ POST /api/transportadoras ->
 {
     "nome": "Nome da Transportadora",
     "localizacao": "Localização da Transportadora",
-    "capacidade": 1000.0
+    "capacidade": 10020.0
 }
 
 
