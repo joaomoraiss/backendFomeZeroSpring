@@ -69,7 +69,7 @@ POST /api/armazens   ->
 {
     "nome": "Armazém Central 2",
     "localizacao": "Centro da Cidade",
-    "capacidade": 500.2,
+    "capacidade": 500.442,
     "empresa": {
         "id": "2"
     }
