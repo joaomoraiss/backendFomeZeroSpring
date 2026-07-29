@@ -5,7 +5,7 @@ Post ->
 
 {
     "nome": "ONG Exemplo",
-    "localizacao": "Cidade Exemplo",
+    "localizacao": "Cidade Exempleo",
     "tipoDeOng": "Assistência Social"
 }f
 
