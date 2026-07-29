@@ -15,7 +15,7 @@ Post /api/ongs/{id}/adicionar-necessidade ->
 {
     "nome": "Feijão",
     "tipo": "Grão",
-    "quantidade": 500,
+    "quantidade": 5050,
     "armazem": {
         "id": "9593228d-e408-4fe6-a72c7-c0c86201d98e"
     }
