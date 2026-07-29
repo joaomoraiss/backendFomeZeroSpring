@@ -37,7 +37,7 @@ Post /api/alimentos  ->
 {
     "nome": "Arroz",
     "tipo": "Grão",
-    "quantidade": 100,
+    "quantidade": 1020,
     "armazem": {
         "id": "9593228d-e4408-4fe6-a7c7-c0c86201d98e"
     },g
